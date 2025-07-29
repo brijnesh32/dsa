@@ -9,11 +9,21 @@
             document.write(`${data[i]} <br>`)
         }
         document.write(data[8]);
+        function getElement() {
+            let el = document.getElementById('element').value
+            if (el < data.length) {
+                alert(data[el])
+            } else {
+                alert("pls enter valid input")
+            }
+        }
     </script>
 
 </head>
 
 <body>
+    <input type="text" id="element" />
+    <button onclick="getElement()">get element</button>
 
 </body>
 
