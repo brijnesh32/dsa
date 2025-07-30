@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <script>
+        let data = [4, 74, 58, 41, 50];
+        for (i = 0; i < data.length; i++) {
+            for (j = 0; j < data.length; j++) {
+                if (data[j] > data[j + 1]) {
+                    let temp = data[j];
+                    data[j] = data[j + 1];
+                    data[j + 1] = temp;
+                }
+            }
+        }
+        console.log(data)
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
