@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <script>
+        let money = 100;
+        let totalApple = 0;
+        function buyApple(x) {
+            if (x > 0) {
+                console.log("i have ", x, "RS", totalApple)
+                buyMore(x);
+            } else {
+                console.log("i do not have more money", totalApple)
+            }
+        }
+        function buyMore(x) {
+            totalApple++
+            buyApple(x - 10)
+        }
+        buyApple(money);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
