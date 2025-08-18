@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+<script>
+    let data = [7, 4, 9, 2, 5, 5, 74, 98, 45];
+    let temp;
+    function customReverse(data, str, end) {
+        console.log(data);
+        if (str <= end) {
+            temp = data[str];
+            data[str] = data[end];
+            data[end] = temp;
+            customReverse(data, str + 1, end - 1);
+        }
+    }
+    customReverse(data, 0, data.length - 1);
+</script>
+
+<body>
+
+</body>
+
+</html>
