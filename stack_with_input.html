@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+<script>
+    let data = []
+    let currentSize = data.length;
+    let maxSize = 5;
+    function push() {
+        let inputValue = document.getElementById("inputValue").value;
+        if (currentSize >= maxSize) {
+            console.log("Stack overflow");
+            return;
+        }
+        else {
+            data[currentSize] = inputValue;
+            currentSize++;
+        }
+    }
+    function pop() {
+        if (currentSize >= 0) {
+            currentSize -= 1;
+            data.length = currentSize;
+        }
+        else {
+            console.log("Stack underflow");
+            return;
+        }
+    }
+    console.log(data);
+
+
+</script>
+
+<body>
+
+    <h1>Stack with Input</h1>
+    <input type="text" id="inputValue" placeholder="Enter value">
+    <button onclick="push()">add element to strack</button>
+    <button onclick="pop()">remove element for strack </button>
+    <button> Display All element of stack </button>
+
+
+</body>
+
+</html>

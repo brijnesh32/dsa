@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+<script>
+    let data = []
+    let currentSize = data.length;
+    let maxSize = 5;
+    function push(value) {
+        if (currentSize >= maxSize) {
+            console.log("Stack overflow");
+            return;
+        }
+        else {
+            data[currentSize] = value;
+            currentSize++;
+        }
+    }
+    function pop() {
+        if (currentSize >= 0) {
+            currentSize -= 1;
+            data.length = currentSize;
+        }
+        else {
+            console.log("Stack underflow");
+            return;
+        }
+    }
+    console.log(data);
+    push(4);
+    push(4);
+    push(4);
+    push(4);
+    push(4);
+    push(4);
+    pop();
+
+</script>
+
+<body>
+
+</body>
+
+</html>
