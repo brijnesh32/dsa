@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <script>
+        let data = [];
+        let currentSize = data.length;
+        let maxSize = 5;
+        function enqueue(newVal) {
+            if (currentSize >= maxSize) {
+                alert("Queue is full");
+                return;
+            }
+            else {
+                data[currentSize] = newVal;
+                currentSize++;
+            }
+        }
+        function dequue() {
+            if (currentSize <= 0) {
+                alert("Queue is empty");
+
+            }
+            else {
+                for (let i = 0; i < data.length; i++) {
+                    data[i] = data[i + 1];
+
+                }
+                currentSize--;
+                data.length = currentSize;
+            }
+        }
+        function front() {
+            if (currentSize > 0) {
+                console.log(data[0]);
+            }
+            else {
+                alert("Queue is empty");
+
+            }
+        }
+        function rear() {
+            if (currentSize > 0) {
+                document.querySelector("h1").textContent = "rear: " + (data[currentSize - 1]);
+            }
+            else {
+                alert("Queue is empty");
+
+            }
+        }
+
+        function displayQueue() {
+            document.querySelector("h1").textContent = "Queue: " + data.join - (", ");
+
+        }
+        enqueue(10);
+        enqueue(20);
+    </script>
+</head>
+
+<body>
+    <h1>queue </h1>
+    <button onclick="displayQueue()">display </button>
+    <button onclick="rear()">front </button>
+
+</body>
+
+</html>
