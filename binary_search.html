@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <script>
+        let data = [74, 85, 96, 102, 115, 130, 145, 160, 175];
+        let find = 160;
+        let start = 0;
+        let end = data.length - 1;
+        let position = undefined;
+        while (start <= end) {
+            let mid = Math.floor((start + end) / 2);
+            if (data[mid] === find) {
+                position = mid;
+                break;
+            }
+            else if (data[mid] < find) {
+                start = mid + 1;
+            }
+            else {
+                end = mid - 1;
+            }
+
+        }
+        console.log(data[position] + "," + "Element found at index: " + position);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

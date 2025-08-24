@@ -5,6 +5,27 @@
 
     <title>Document</title>
 </head>
+<script>
+    class Queue {
+        constructor(size) {
+            this.max = size;
+            this.items = new Array(size);
+            this.currentSize = 0;
+            this.front = -1;
+            this.rear = -1;
+
+        }
+        enqueue(val) {
+            if (this.currentSize = this.max) {
+                this.rear++;
+                this.items[this.rear] = val;
+                this.currentSize++;
+                if ((this.front = -1)) { }
+            }
+        }
+    }
+
+</script>
 
 <body>
 
