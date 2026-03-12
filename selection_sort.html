@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Document</title>
+    <script>
+        let items = [4, 74, 58, 41, 50];
+        function selectionSort(data) {
+            let minId;
+            for (let i = 0; i < data.length; i++) {
+                minId = i;
+                for (let j = i + 1; j < data.length; j++) {
+                    if (data[j] < data[minId]) {
+                        minId = j;
+                    }
+                }
+                let temp = data[minId];
+                data[minId] = data[i];
+                data[i] = temp;
+
+
+            }
+        }
+        selectionSort(items);
+        console.log(items);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

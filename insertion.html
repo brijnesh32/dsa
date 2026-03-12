@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <script>
+        let arr = [4, 74, 58, 41, 50];
+        function insertionSort(data) {
+            let i, current, j;
+            for (i = 1; i < data.length; i++) {
+                current = data[i];
+                j = i - 1;
+                while ((j >= 0) && (data[j] > current)) {
+                    data[j + 1] = data[j];
+                    j--;
+                }
+                data[j + 1] = current;
+            }
+        }
+        insertionSort(arr);
+        console.log(arr);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
