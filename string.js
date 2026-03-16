@@ -34,11 +34,55 @@ const newstr = str.concat("!"); // hello world!
 const toBeConverted = { name: "john" };
 //console.log(String(toBeConverted)); // [object Object]
 //console.log(JSON.stringify(toBeConverted)); // {"name":"john"}
-console.log("A" == "a"); // false
-console.log(str.charCodeAt(0)); // 104
-console.log(String.fromCharCode(104)); // h
+//console.log("A" == "a"); // false
+//console.log(str.charCodeAt(0)); // 104
+//console.log(String.fromCharCode(104)); // h
 
 const st = "hello world";
 const st2 = " 123";
 
-console.log(st.localeCompare(st2)); // -1
+//onsole.log(st.localeCompare(st2)); // -1
+
+// truncate the text
+function truncateText(text, maxLength) {
+  if (text.length > maxLength) {
+    return text.substring(0, maxLength) + "...";
+  }
+  return text;
+}
+
+//console.log(truncateText("This is a long text that needs to be truncated.", 20),); // This is a long text...
+
+//palindrome number
+
+function ispalindrome(num) {
+  return num < 0 ? false : num == +num.toString().split("").reverse().join("");
+}
+
+//console.log(ispalindrome("AXA")); // false
+//console.log(ispalindrome("12321")); // true
+
+// hamming Distance
+function hammingDistance(str1, str2) {
+  if (str1.length !== str2.length) {
+    throw new Error("Strings must be of the same length");
+  }
+  let distance = 0;
+  for (let i = 0; i < str1.length; i++) {
+    if (str1[i] !== str2[i]) {
+      distance++;
+    }
+  }
+  return distance;
+}
+
+//console.log(hammingDistance("hello", "h7llo")); // 1
+
+// valid anagram
+function isAnagram(str1, str2) {
+  str1 = str1.split("").sort().join("");
+  str2 = str2.split("").sort().join("");
+  return str1 === str2;
+}
+//console.log(isAnagram("listen", "silent")); // true
+//console.log(isAnagram("hello", "world")); // false
